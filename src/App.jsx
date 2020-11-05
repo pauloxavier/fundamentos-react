@@ -8,10 +8,29 @@ import Card from "./components/layout/Card";
 import Repeticao from "./components/basicos/Repeticao";
 import Condicional from "./components/basicos/Condicional";
 import CondicionalComIf from "./components/basicos/CondicionalComIf.jsx";
+import Pai from "./components/comunicacao/direta/Pai"
+import Super from "./components/comunicacao/indireta/Super"
+import Input from "./components/form/Input"
+import Contador from "./components/contador/Contador"
 
+// eslint-disable-next-line
 export default (props) => (
   <div className="App">
-      <Card titulo="# 06 - Condicional V2" color=" #FA6900">
+    <h1>Fundamentos React</h1>
+    <div className="Cards">
+    <Card titulo="# 10 - Contador" color="#FEAC5E">
+          <Contador passo= {10} valor= {100}></Contador>
+      </Card>
+      <Card titulo="# 09 - Input" color="#BBB5">
+          <Input></Input>
+      </Card>
+      <Card titulo="# 08 - Comunicação Indireta" color="#000">
+          <Super></Super>
+      </Card>
+      <Card titulo="# 07 - Comunicação Direta" color="#FB0">
+          <Pai sobrenome="Xavier"></Pai>
+      </Card>
+      <Card titulo="# 06 - Condicional V2" color="#FA6900">
         <CondicionalComIf numero={11}></CondicionalComIf>
       </Card>
       <Card titulo="# 05 - Condicional V1" color="#E94C6F">
@@ -36,6 +55,9 @@ export default (props) => (
       </Card>   
       <Card titulo="# 01 - Primeiro Componente" color="#354458">
         <Primeiro/>
-      </Card>     
+      </Card>   
+    </div>
+    
+        
     </div>
 );
